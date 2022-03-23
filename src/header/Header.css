@@ -1,0 +1,28 @@
+.containerheader{
+    display: flex;
+    justify-content: end;
+
+    background-color: #1E90FF;
+    height: 10%;
+    padding: 0 10%;
+}
+
+.containerheader h1{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+.clicavel{
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+.praianos:hover{
+    color: orange;
+}
+
+.trevosos:hover{
+    color: purple;
+}
