@@ -4,7 +4,7 @@ import Card from '../card/Card.js';
 
 function Body() {
   return (
-    <div class="containerbody">
+    <div class="container-body">
       <Card/>
     </div>
   );

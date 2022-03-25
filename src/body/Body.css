@@ -1,6 +1,10 @@
-.containerbody{
+.container-body{
+    --sizeCardWidth: 301px;
+    --sizeCardheight: 421px;
+
     display: flex;
     height: 80%;
-    background-color: black;
+    padding: 5%;
+    background-image: linear-gradient( rgb(141, 138, 138), rgb(77, 74, 74) );
 }
 

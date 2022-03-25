@@ -1,10 +1,54 @@
-.fundoCard{
-    width: 301px;
-    height: 421px;
-    background-color: rgb(165, 160, 160);
+.card-posicao{
+    
+    display: grid;
+
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(10, 10%);
+
+    width: calc(var(--sizeCardWidth) * 3/5);
+    height: calc(var(--sizeCardheight)* 3/5);
+
+    border-width: 7px;
+    border-style: ridge;
+    border-color: #111111;
+
+    transition-duration: 1.5s;
+}
+.card-em-si{
+    width: calc(var(--sizeCardWidth) * 3/5);
+    height: calc(var(--sizeCardheight)* 3/5);
+    transition-duration: 1.5s;
+
 }
 
-img{
-    width: 301px;
-    height: 421px;
+.habilidades{
+    display: inline-block;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 30px;
+    border: none;
 }
+
+.habilidades:hover{
+    width: 100px;
+}
+
+#passiva{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+/* .card-posicao:hover{
+    width: calc(var(--sizeCardWidth)*4/5);
+    height: calc(var(--sizeCardheight)*4/5);
+
+    border-color: var(--laranja);
+}
+
+.card-em-si:hover{
+    width: calc(var(--sizeCardWidth)*4/5);
+    height: calc(var(--sizeCardheight)*4/5)
+} */

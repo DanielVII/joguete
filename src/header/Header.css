@@ -1,13 +1,14 @@
-.containerheader{
+.container-header{
     display: flex;
     justify-content: end;
 
-    background-color: #1E90FF;
-    height: 10%;
+    background-image: linear-gradient( rgb(77, 74, 74), rgb(141, 138, 138) );
+    height: 13%;
     padding: 0 10%;
+
 }
 
-.containerheader h1{
+.container-header h1{
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -20,7 +21,7 @@
 }
 
 .praianos:hover{
-    color: orange;
+    color: var(--laranja);
 }
 
 .trevosos:hover{
