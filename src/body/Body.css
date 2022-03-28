@@ -1,6 +1,6 @@
 .container-body{
-    --sizeCardWidth: 301px;
-    --sizeCardheight: 421px;
+    --sizeCardWidth: calc(301px*3/5);
+    --sizeCardheight: calc(421px*3/5);
 
     display: flex;
     height: 80%;
