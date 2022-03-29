@@ -1,29 +1,28 @@
-.container-header{
+.container-header {
     display: flex;
     justify-content: end;
 
-    background-image: linear-gradient( rgb(77, 74, 74), rgb(141, 138, 138) );
+    background-image: linear-gradient(rgb(77, 74, 74), rgb(141, 138, 138));
     height: 13%;
     padding: 0 10%;
-
 }
 
-.container-header h1{
+.container-header h1 {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     margin: 0 1rem;
 }
 
-.clicavel{
+.clicavel {
     cursor: pointer;
     transition-duration: 500ms;
 }
 
-.praianos:hover{
+.praianos:hover {
     color: var(--laranja);
 }
 
-.trevosos:hover{
+.trevosos:hover {
     color: purple;
 }

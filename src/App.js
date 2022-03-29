@@ -1,15 +1,17 @@
 import './App.css';
-import Body from './body/Body';
-import './header/Header.js'
-import Header from './header/Header.js';
+import Header from './components/header/Header.jsx';
+import Body from './components/body/Body.jsx';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div class="site">
-      <Header/>
-      <Body/>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return (
+      <div class="site">
+        <Header/>
+        <Body/>
+      </div>
+    );
+  }
 }
 
 export default App;

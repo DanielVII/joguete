@@ -1,12 +1,10 @@
-.card-posicao{
-    
+.card-posicao {
     width: var(--sizeCardWidth);
     height: var(--sizeCardheight);
-    
-    display: grid;
-    grid-template-columns:0px repeat(4, 1fr);
-    grid-template-rows: 0px repeat(6, 1fr);
 
+    display: grid;
+    grid-template-columns: 0px repeat(4, 1fr);
+    grid-template-rows: 0px repeat(6, 1fr);
 
     /* border-width: 7px;
     border-style: ridge;
@@ -14,15 +12,13 @@
 
     transition-duration: 1.5s;
 }
-.card-em-si{
-
+.card-em-si {
     width: var(--sizeCardWidth);
     height: var(--sizeCardheight);
     transition-duration: 1.5s;
-
 }
 
-.botao-habilidade{
+.botao-habilidade {
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -32,29 +28,28 @@
     border: none;
 }
 
-
-.img-habilidade{
-    width: calc(var(--sizeCardWidth)/4);
+.img-habilidade {
+    width: calc(var(--sizeCardWidth) / 4);
     height: calc(var(--sizeCardheight/6));
     display: block;
 }
 
-#botao-passiva{
+#botao-passiva {
     grid-column-start: 2;
     grid-row-start: 7;
 }
 
-#botao-habilidade-arma{
+#botao-habilidade-arma {
     grid-column-start: 3;
     grid-row-start: 7;
 }
 
-#botao-habilidade-um{
+#botao-habilidade-um {
     grid-column-start: 4;
     grid-row-start: 7;
 }
 
-#botao-habilidade-dois{
+#botao-habilidade-dois {
     grid-column-start: 5;
     grid-row-start: 7;
 }
