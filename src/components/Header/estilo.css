@@ -7,22 +7,19 @@
     padding: 0 10%;
 }
 
-.container-header h1 {
+.container-header_clicavel {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     margin: 0 1rem;
-}
-
-.clicavel {
     cursor: pointer;
     transition-duration: 500ms;
 }
 
-.praianos:hover {
+.container-header_praianos:hover {
     color: var(--laranja);
 }
 
-.trevosos:hover {
+.container-header_trevosos:hover {
     color: purple;
 }

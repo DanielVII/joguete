@@ -1,4 +1,4 @@
-.card-posicao {
+.carta {
     width: var(--sizeCardWidth);
     height: var(--sizeCardheight);
 
@@ -12,13 +12,13 @@
 
     transition-duration: 1.5s;
 }
-.card-em-si {
+.carta_img {
     width: var(--sizeCardWidth);
     height: var(--sizeCardheight);
     transition-duration: 1.5s;
 }
 
-.botao-habilidade {
+.carta_botao-habilidade {
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -28,28 +28,28 @@
     border: none;
 }
 
-.img-habilidade {
+.carta_img-habilidade {
     width: calc(var(--sizeCardWidth) / 4);
     height: calc(var(--sizeCardheight/6));
     display: block;
 }
 
-#botao-passiva {
+#carta_botao-passiva {
     grid-column-start: 2;
     grid-row-start: 7;
 }
 
-#botao-habilidade-arma {
+#carta_botao-habilidade-arma {
     grid-column-start: 3;
     grid-row-start: 7;
 }
 
-#botao-habilidade-um {
+#carta_botao-habilidade-um {
     grid-column-start: 4;
     grid-row-start: 7;
 }
 
-#botao-habilidade-dois {
+#carta_botao-habilidade-dois {
     grid-column-start: 5;
     grid-row-start: 7;
 }

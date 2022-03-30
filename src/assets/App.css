@@ -1,9 +1,13 @@
-.site{
+:root {
+    --laranja: #ff7500;
+}
+
+.site {
     display: flex;
     flex-direction: column;
     margin: 0;
     height: 100%;
 }
-h1{
+h1 {
     font-family: Georgia;
 }

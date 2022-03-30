@@ -1,12 +1,12 @@
-import './App.css';
-import Header from './components/header/Header.jsx';
-import Body from './components/body/Body.jsx';
+import './assets/App.css';
+import Header from './components/Header';
+import Body from './components/Body';
 import { Component } from 'react';
 
 class App extends Component{
   render(){
     return (
-      <div class="site">
+      <div className="site">
         <Header/>
         <Body/>
       </div>

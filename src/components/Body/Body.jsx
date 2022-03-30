@@ -1,11 +1,11 @@
 import { Component } from "react";
-import "./Body.css";
-import Card from "../card/Card.jsx";
+import "./estilo.css";
+import Card from "../Card";
 
 class Body extends Component {
     render() {
         return (
-            <div class="container-body">
+            <div className="container-body">
                 <Card />
             </div>
         );
