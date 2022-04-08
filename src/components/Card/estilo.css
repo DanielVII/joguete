@@ -23,33 +23,32 @@
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: calc(var(--sizeCardWidth/4));
-    height: calc(var(--sizeCardheight/6));
+    width: calc(var(--sizeCardWidth) / 4);
+    height: calc(var(--sizeCardheight) / 6);
     border: none;
+
+    grid-row-start: 7;
 }
 
 .carta_img-habilidade {
     width: calc(var(--sizeCardWidth) / 4);
-    height: calc(var(--sizeCardheight/6));
+    height: calc(var(--sizeCardheight) / 6);
     display: block;
+    cursor: pointer;
 }
 
 #carta_botao-passiva {
     grid-column-start: 2;
-    grid-row-start: 7;
 }
 
 #carta_botao-habilidade-arma {
     grid-column-start: 3;
-    grid-row-start: 7;
 }
 
 #carta_botao-habilidade-um {
     grid-column-start: 4;
-    grid-row-start: 7;
 }
 
 #carta_botao-habilidade-dois {
     grid-column-start: 5;
-    grid-row-start: 7;
 }
