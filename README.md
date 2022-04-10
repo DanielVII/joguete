@@ -18,19 +18,31 @@ Para rodar essa aplicação é necessario as seguintes ferramentas:
 </ul>
 
 <object data="../src/assets/svg/gear.svg">
-<h1>Colocando para funcionar</h1>
-</object>
+<h1>Colocando para funcionar <img src="../src/assets/svg/gear.svg"/></h1>
 
 ```bash
 # Clone o repositorio na pasta desejada
-$ git clone <https://github.com/DanielVII/joguete.git>
+$ git clone https://github.com/DanielVII/joguete.git
+```
 
+```bash
 # Acesse a pasta  onde foi feito o clone
 $ cd suaPasta/
+```
 
+```bash
 # Instale as dependências
 $ npm install
+```
 
+```bash
 # Agora é só abrir
 $ npm start
 ```
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas:
+
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
