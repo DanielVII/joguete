@@ -17,7 +17,7 @@ Para rodar essa aplicação é necessario as seguintes ferramentas:
     <li><a href="https://nodejs.org/en/">Node.js</a></li>
 </ul>
 
-<h1>Colocando para funcionar</h1> #339933
+<h1>Colocando para funcionar</h1> :gear:
 
 ```bash
 # Clone o repositorio na pasta desejada
@@ -43,5 +43,5 @@ $ npm start
 
 As seguintes ferramentas foram usadas:
 
-- [Node.js](https://nodejs.org/en/) #339933
-- [React](https://pt-br.reactjs.org/) #F50057
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
