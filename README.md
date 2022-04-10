@@ -17,7 +17,7 @@ Para rodar essa aplicação é necessario as seguintes ferramentas:
     <li><a href="https://nodejs.org/en/">Node.js</a></li>
 </ul>
 
-<h1>Colocando para funcionar</h1> :gear:
+### Colocando para funcionar :gear:
 
 ```bash
 # Clone o repositorio na pasta desejada
