@@ -8,7 +8,7 @@
 	🚧    Em construção    🚧
 </h4>
 
-### Pré-requesitos
+### :bookmark_tabs: Pré-requesitos
 
 Para rodar essa aplicação é necessario as seguintes ferramentas:
 
@@ -17,7 +17,7 @@ Para rodar essa aplicação é necessario as seguintes ferramentas:
     <li><a href="https://nodejs.org/en/">Node.js</a></li>
 </ul>
 
-### Colocando para funcionar :gear:
+### :gear: Colocando para funcionar
 
 ```bash
 # Clone o repositorio na pasta desejada
