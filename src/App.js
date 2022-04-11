@@ -1,6 +1,6 @@
 import './assets/App.css';
 import Header from './components/Header';
-import Body from './components/Body';
+import Deck from './components/Deck';
 import { Component } from 'react';
 
 class App extends Component{
@@ -8,7 +8,7 @@ class App extends Component{
     return (
       <div className="site">
         <Header/>
-        <Body/>
+        <Deck/>
       </div>
     );
   }

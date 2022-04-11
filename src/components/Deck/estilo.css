@@ -1,0 +1,130 @@
+.container-deck {
+    --sizeCardWidth: calc(301px * 4 / 5);
+    --sizeCardheight: calc(421px * 4 / 5);
+
+    width: 70%;
+
+    border: solid;
+    border-color: #dfdfde;
+    border-width: 2px;
+    border-radius: 1em;
+
+    padding: 5%;
+    margin: 0 auto;
+}
+
+.carta {
+    width: var(--sizeCardWidth);
+    height: var(--sizeCardheight);
+
+    display: grid;
+    grid-template-columns: 0px repeat(4, 1fr);
+    grid-template-rows: 0px repeat(6, 1fr);
+
+    transition-duration: 1.5s;
+}
+.carta_img {
+    width: var(--sizeCardWidth);
+    height: var(--sizeCardheight);
+    transition-duration: 1.5s;
+}
+
+.carta_habilidade {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: calc(var(--sizeCardWidth) / 4);
+    height: calc(var(--sizeCardheight) / 6);
+    border: none;
+
+    grid-row-start: 7;
+}
+
+.carta_img-habilidade {
+    width: calc(var(--sizeCardWidth) / 4);
+    height: calc(var(--sizeCardheight) / 6);
+    display: block;
+    cursor: pointer;
+}
+
+.carta_habil-passiva {
+    grid-column-start: 2;
+}
+
+.carta_habil-arma {
+    grid-column-start: 3;
+}
+
+.carta_habil-um {
+    grid-column-start: 4;
+}
+
+.carta_habil-dois {
+    grid-column-start: 5;
+}
+
+.caixa-texto-habil {
+    display: flex;
+    flex-direction: column;
+
+    width: 7em;
+
+    background-color: #6ac4f8;
+
+    border-radius: 5%;
+    padding: 0.2em 0.3em;
+}
+
+.nome-habil {
+    font-size: 0.8em;
+
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+.acao-habil {
+    font-size: 0.6em;
+    margin: 0.2em 0;
+}
+
+.caixa-texto-habil-passiva {
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+    grid-row-start: 6;
+    grid-row-end: 6;
+
+    display: none;
+}
+
+.caixa-texto-habil-arma {
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+    grid-row-start: 6;
+    grid-row-end: 6;
+
+    display: none;
+}
+
+.caixa-texto-habil-um {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 6;
+    grid-row-end: 6;
+
+    display: none;
+}
+
+.caixa-texto-habil-dois {
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+    grid-row-start: 6;
+    grid-row-end: 6;
+
+    display: none;
+}
