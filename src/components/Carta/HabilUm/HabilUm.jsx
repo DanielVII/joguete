@@ -3,15 +3,10 @@ import React, { Component } from "react";
 export default class HabilUm extends Component {
     constructor(props) {
         super(props);
+
+        this.nomeClasse = ".caixa-texto-habil-um";
+
         this.state = {};
-    }
-
-    inside() {
-        document.querySelector(".caixa-texto-habil-um").style.display = "flex";
-    }
-
-    outside() {
-        document.querySelector(".caixa-texto-habil-um").style.display = "none";
     }
 
     render() {
@@ -19,13 +14,15 @@ export default class HabilUm extends Component {
             <button
                 type="button"
                 className="carta_habilidade carta_habil-um"
-                onMouseEnter={() => this.inside()}
-                onMouseLeave={() => this.outside()}
+                onClick={this.props.acaoUm}
+                onMouseEnter={() => this.props.inside(this.nomeClasse)}
+                onMouseLeave={() => this.props.outside(this.nomeClasse)}
             >
                 <img
-                    src="https://i.imgur.com/7Zgn1IK.png"
+                    src={this.props.imgUm}
                     alt="img-habilidade"
                     className="carta_img-habilidade"
+                    id={this.props.idUm}
                 />
             </button>
         );

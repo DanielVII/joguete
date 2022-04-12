@@ -1,2 +1,2 @@
-import CardD from "./CardD"
-export default CardD
+import Carta from "./Carta"
+export default Carta

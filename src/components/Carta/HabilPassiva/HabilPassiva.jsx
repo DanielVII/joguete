@@ -4,17 +4,10 @@ import "./estilo.css";
 export default class HabilPassiva extends Component {
     constructor(props) {
         super(props);
+
+        this.nomeClasse = ".caixa-texto-habil-passiva";
+
         this.state = {};
-    }
-
-    inside() {
-        document.querySelector(".caixa-texto-habil-passiva").style.display =
-            "flex";
-    }
-
-    outside() {
-        document.querySelector(".caixa-texto-habil-passiva").style.display =
-            "none";
     }
 
     render() {
@@ -22,13 +15,15 @@ export default class HabilPassiva extends Component {
             <button
                 type="button"
                 className="carta_habilidade carta_habil-passiva"
-                onMouseEnter={() => this.inside()}
-                onMouseLeave={() => this.outside()}
+                onClick={this.props.acaoPassiva}
+                onMouseEnter={() => this.props.inside(this.nomeClasse)}
+                onMouseLeave={() => this.props.outside(this.nomeClasse)}
             >
                 <img
-                    src="https://i.imgur.com/U8yQXgO.jpg"
+                    src={this.props.imgPassiva}
                     alt="img-habilidade"
                     className="carta_img-habilidade"
+                    id={this.props.idPassiva}
                 />
             </button>
         );
