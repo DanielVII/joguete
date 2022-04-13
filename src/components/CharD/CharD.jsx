@@ -9,6 +9,8 @@ import sadSong3 from "./assets/static/sadSong3.mp3";
 export default class CharD extends Component {
     constructor(props) {
         super(props);
+        this.imgCarta = "https://i.imgur.com/1h6AovY.jpeg";
+
         this.tituloHabilidade = [
             "Crise de riso",
             "Solta o som",
@@ -21,19 +23,20 @@ export default class CharD extends Component {
             "Solta uma piadola que dá um pequeno buff e acumula pensamento.",
             "Lança AirPods no inimigo, acertando bem na orelha e o fazendo escutar musicas tristes. Com isso, deixando-o mais fraco.",
         ];
-        this.imgCarta = "https://i.imgur.com/1h6AovY.jpeg";
 
-        this.imgPassiva = "https://i.imgur.com/U8yQXgO.jpg";
-        this.idPassiva = "carta-d_img-habil-passiva";
+        this.imgsBotao = [
+            "https://i.imgur.com/U8yQXgO.jpg",
+            "https://i.imgur.com/cbdHquV.jpg",
+            "https://i.imgur.com/7Zgn1IK.png",
+            "https://i.imgur.com/caR9gB4.png",
+        ];
 
-        this.imgArma = "https://i.imgur.com/cbdHquV.jpg";
-        this.idArma = "carta-d_img-habil-arma";
-
-        this.imgUm = "https://i.imgur.com/7Zgn1IK.png";
-        this.idUm = "carta-d_img-habil-um";
-
-        this.imgDois = "https://i.imgur.com/caR9gB4.png";
-        this.idDois = "carta-d_img-habil-dois";
+        this.idsImgBotao = [
+            "carta-d_img-habil-passiva",
+            "carta-d_img-habil-arma",
+            "carta-d_img-habil-um",
+            "carta-d_img-habil-dois",
+        ];
 
         this.state = {
             songJazz: new Audio(songArma),
@@ -119,17 +122,11 @@ export default class CharD extends Component {
                 imgCarta={this.imgCarta}
                 tituloHabilidade={this.tituloHabilidade}
                 textoHabilidade={this.textoHabilidade}
-                imgPassiva={this.imgPassiva}
-                idPassiva={this.idPassiva}
+                imgsBotao={this.imgsBotao}
+                idsImgBotao={this.idsImgBotao}
                 acaoPassiva={this.acaoPassiva.bind(this)}
-                imgArma={this.imgArma}
-                idArma={this.idArma}
                 acaoArma={this.acaoArma.bind(this)}
-                imgUm={this.imgUm}
-                idUm={this.idUm}
                 acaoUm={this.acaoUm.bind(this)}
-                imgDois={this.imgDois}
-                idDois={this.idDois}
                 acaoDois={this.acaoDois.bind(this)}
             />
         );

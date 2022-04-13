@@ -7,11 +7,18 @@ import HabilDois from "./HabilDois";
 export default class Carta extends Component {
     constructor(props) {
         super(props);
-        this.tipoHabilidade = [
+        this.classNameCaixatxt = [
             "caixa-texto-habil-passiva",
             "caixa-texto-habil-arma",
             "caixa-texto-habil-um",
             "caixa-texto-habil-dois",
+        ];
+
+        this.classNameBotao = [
+            "carta_habil-passiva",
+            "carta_habil-arma",
+            "carta_habil-um",
+            "carta_habil-dois",
         ];
     }
 
@@ -31,11 +38,11 @@ export default class Carta extends Component {
                     alt="imagem da carta"
                     className="carta_img"
                 />
-                {this.tipoHabilidade.map((classe, index) => {
-                    console.log(this.props.tituloHabilidade[index]);
+
+                {this.classNameCaixatxt.map((classeCaixa, index) => {
                     return (
                         <div
-                            className={"caixa-texto-habil " + classe}
+                            className={"caixa-texto-habil " + classeCaixa}
                             key={index}
                         >
                             <span className="nome-habil">
@@ -50,32 +57,32 @@ export default class Carta extends Component {
 
                 <HabilPassiva
                     acaoPassiva={this.props.acaoPassiva}
-                    imgPassiva={this.props.imgPassiva}
-                    idPassiva={this.props.idPassiva}
+                    imgPassiva={this.props.imgsBotao[0]}
+                    idPassiva={this.props.idsImgBotao[0]}
                     inside={this.inside.bind(this)}
                     outside={this.outside.bind(this)}
                 />
 
                 <HabilArma
                     acaoArma={this.props.acaoArma}
-                    imgArma={this.props.imgArma}
-                    idArma={this.props.idArma}
+                    imgArma={this.props.imgsBotao[1]}
+                    idArma={this.props.idsImgBotao[1]}
                     inside={this.inside.bind(this)}
                     outside={this.outside.bind(this)}
                 />
 
                 <HabilUm
                     acaoUm={this.props.acaoUm}
-                    imgUm={this.props.imgUm}
-                    idUm={this.props.idUm}
+                    imgUm={this.props.imgsBotao[2]}
+                    idUm={this.props.idsImgBotao[2]}
                     inside={this.inside.bind(this)}
                     outside={this.outside.bind(this)}
                 />
 
                 <HabilDois
                     acaoDois={this.props.acaoDois}
-                    imgDois={this.props.imgDois}
-                    idDois={this.props.idDois}
+                    imgDois={this.props.imgsBotao[3]}
+                    idDois={this.props.idsImgBotao[3]}
                     inside={this.inside.bind(this)}
                     outside={this.outside.bind(this)}
                 />
