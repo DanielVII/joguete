@@ -1,12 +1,12 @@
 import { Component } from "react";
 import "./estilo.css";
-import CharD from "../CharD";
+import CartaDaniel from "../CartaDaniel";
 
 export default class Deck extends Component {
     render() {
         return (
             <section className="container-deck">
-                <CharD />
+                <CartaDaniel />
             </section>
         );
     }

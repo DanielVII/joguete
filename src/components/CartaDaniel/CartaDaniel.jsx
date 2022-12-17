@@ -1,3 +1,4 @@
+import api from "../../services/api";
 import React, { Component } from "react";
 import Carta from "../Carta";
 
@@ -6,9 +7,12 @@ import sadSong1 from "./assets/static/sadSong1.mp3";
 import sadSong2 from "./assets/static/sadSong2.mp3";
 import sadSong3 from "./assets/static/sadSong3.mp3";
 
-export default class CharD extends Component {
+export default class CartaDaniel extends Component {
+
     constructor(props) {
+
         super(props);
+
         this.imgCarta = "https://i.imgur.com/1h6AovY.jpeg";
 
         this.tituloHabilidade = [
@@ -53,9 +57,17 @@ export default class CharD extends Component {
             playingNowSad: new Audio(sadSong3),
 
             playingNowSadOnline: false,
+
+            mama: [],
         };
     }
 
+    async componentDidMount() {
+        const response = await api.get("habilidades/?format=json");
+
+        this.setState({ mama: response.data });
+
+    }
     playPause(audio, isplaying) {
         if (isplaying) {
             audio.pause();
@@ -67,7 +79,7 @@ export default class CharD extends Component {
     }
 
     acaoPassiva() {
-        console.log("BOOOOOM. nada acontece");
+        console.log(this.state.mama[0]["url_img_passiva"]);
     }
 
     acaoArma() {
@@ -80,6 +92,8 @@ export default class CharD extends Component {
         } else {
             imgem.src = "https://i.imgur.com/I9yx1ab.jpg";
         }
+
+        console.log(this.state.mama);
     }
 
     acaoUm() {
@@ -118,7 +132,7 @@ export default class CharD extends Component {
 
     render() {
         return (
-            <Carta
+            <Carta    
                 imgCarta={this.imgCarta}
                 tituloHabilidade={this.tituloHabilidade}
                 textoHabilidade={this.textoHabilidade}
@@ -129,6 +143,8 @@ export default class CharD extends Component {
                 acaoUm={this.acaoUm.bind(this)}
                 acaoDois={this.acaoDois.bind(this)}
             />
+               
+            
         );
     }
 }
