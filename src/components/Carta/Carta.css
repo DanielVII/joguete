@@ -1,0 +1,15 @@
+.carta {
+    width: var(--sizeCardWidth);
+    height: var(--sizeCardheight);
+
+    display: grid;
+    grid-template-columns: 0px repeat(4, 1fr);
+    grid-template-rows: 0px repeat(6, 1fr);
+
+    transition-duration: 1.5s;
+}
+.carta_img {
+    width: var(--sizeCardWidth);
+    height: var(--sizeCardheight);
+    transition-duration: 1.5s;
+}
