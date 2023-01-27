@@ -1,85 +1,91 @@
 import './Carta.css'
 
+import CaixaTextoHabilidade from '../CaixaTextoHabilidade';
+import BotaoHabilidade from '../BotaoHabilidade';
+
 const Carta = (props) => {
-    
-        const classNameCaixatxt = [
-            "caixa-texto-habil-passiva",
-            "caixa-texto-habil-arma",
-            "caixa-texto-habil-um",
-            "caixa-texto-habil-dois",
-        ];
+    /*
+    props:
+        srcImgCarta - titulosHabilidades - textoshabilidades
 
-        const classNameBotao = [
-            "carta_habil-passiva",
-            "carta_habil-arma",
-            "carta_habil-um",
-            "carta_habil-dois",
-        ];
-        
-        const inside = (nomeClasse) => {
-            document.querySelector(nomeClasse).style.display = "flex";
-        }
-    
-        const outside = (nomeClasse) => {
-            document.querySelector(nomeClasse).style.display = "none";
-        }
+        srcImgsBotao - acaoPassiva - acaoArma - acaoUm - acaoDois
+    */
+    const classNameCaixatxt = {
+        passiva: "caixa-texto-habil-passiva",
+        arma: "caixa-texto-habil-arma",
+        um: "caixa-texto-habil-um",
+        dois: "caixa-texto-habil-dois",
+    };
 
-        return (
-            <div className="carta">
-                <img
-                    src={props.imgCarta}
-                    alt="imagem da carta"
-                    className="carta_img"
-                />
+    const classNameBotao = {
+        passiva: "carta-habil-passiva",
+        arma: "carta-habil-arma",
+        um: "carta-habil-um",
+        dois: "carta-habil-dois",
+    };
 
-                {this.classNameCaixatxt.map((classeCaixa, index) => {
-                    return (
-                        <div
-                            className={"caixa-texto-habil " + classeCaixa}
-                            key={index}
-                        >
-                            <span className="nome-habil">
-                                {this.props.tituloHabilidade[index]}
-                            </span>
-                            <span className="acao-habil">
-                                {this.props.textoHabilidade[index]}
-                            </span>
-                        </div>
-                    );
-                })}
+    return (
+        <div className="carta">
+            <img
+                src={props.srcImgCarta}
+                alt="imagem da carta"
+                className="carta-img-principal"
+            />
 
-                <HabilPassiva
-                    acaoPassiva={this.props.acaoPassiva}
-                    imgPassiva={this.props.imgsBotao[0]}
-                    idPassiva={this.props.idsImgBotao[0]}
-                    inside={this.inside.bind(this)}
-                    outside={this.outside.bind(this)}
-                />
+            <CaixaTextoHabilidade
+                nomeClasseCaixaTexto={classNameCaixatxt.passiva}
+                tituloHabilidade={props.titulosHabilidades.passiva}
+                textoHabilidade={props.textoshabilidades.passiva}
+            />
 
-                <HabilArma
-                    acaoArma={this.props.acaoArma}
-                    imgArma={this.props.imgsBotao[1]}
-                    idArma={this.props.idsImgBotao[1]}
-                    inside={this.inside.bind(this)}
-                    outside={this.outside.bind(this)}
-                />
+            <CaixaTextoHabilidade
+                nomeClasseCaixaTexto={classNameCaixatxt.arma}
+                tituloHabilidade={props.titulosHabilidades.arma}
+                textoHabilidade={props.textoshabilidades.arma}
+            />
 
-                <HabilUm
-                    acaoUm={this.props.acaoUm}
-                    imgUm={this.props.imgsBotao[2]}
-                    idUm={this.props.idsImgBotao[2]}
-                    inside={this.inside.bind(this)}
-                    outside={this.outside.bind(this)}
-                />
+            <CaixaTextoHabilidade
+                nomeClasseCaixaTexto={classNameCaixatxt.um}
+                tituloHabilidade={props.titulosHabilidades.um}
+                textoHabilidade={props.textoshabilidades.um}
+            />
 
-                <HabilDois
-                    acaoDois={this.props.acaoDois}
-                    imgDois={this.props.imgsBotao[3]}
-                    idDois={this.props.idsImgBotao[3]}
-                    inside={this.inside.bind(this)}
-                    outside={this.outside.bind(this)}
-                />
-            </div>
-        );
-    
+            <CaixaTextoHabilidade
+                nomeClasseCaixaTexto={classNameCaixatxt.dois}
+                tituloHabilidade={props.titulosHabilidades.dois}
+                textoHabilidade={props.textoshabilidades.dois}
+            />
+
+            <BotaoHabilidade
+                acao={props.acaoPassiva}
+                imgBotaoHabilidade={props.srcImgsBotao.passiva}
+                nomeClasseCaixaTexto={classNameCaixatxt.passiva}
+                nomeClasseBotao={classNameBotao.passiva}
+            />
+
+            <BotaoHabilidade
+                acao={props.acaoArma}
+                imgBotaoHabilidade={props.srcImgsBotao.arma}
+                nomeClasseCaixaTexto={classNameCaixatxt.arma}
+                nomeClasseBotao={classNameBotao.arma}
+            />
+
+            <BotaoHabilidade
+                acao={props.acaoUm}
+                imgBotaoHabilidade={props.srcImgsBotao.um}
+                nomeClasseCaixaTexto={classNameCaixatxt.um}
+                nomeClasseBotao={classNameBotao.um}
+            />
+
+            <BotaoHabilidade
+                acao={props.acaoDois}
+                imgBotaoHabilidade={props.srcImgsBotao.dois}
+                nomeClasseCaixaTexto={classNameCaixatxt.dois}
+                nomeClasseBotao={classNameBotao.dois}
+            />
+        </div>
+    );
+
 }
+
+export default Carta

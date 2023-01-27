@@ -11,32 +11,32 @@ const CartaDaniel = () =>{
 
         const imgCarta = "https://i.imgur.com/1h6AovY.jpeg";
 
-        const tituloHabilidade = [
-            "Crise de riso",
-            "Solta o som",
-            "Piadola",
-            "TO COM DEPRESSÃO",
-        ];
-        const textoHabilidade = [
-            "Solta uma piada muito boa quando acumula pensamento, fazendo a equipe ter uma crise de riso. Por consequência, todos perdem um turno,mas, no próximo terão um grande buff.",
-            "Escolhe uma música adequada a situação, dando um leve buff.",
-            "Solta uma piadola que dá um pequeno buff e acumula pensamento.",
-            "Lança AirPods no inimigo, acertando bem na orelha e o fazendo escutar musicas tristes. Com isso, deixando-o mais fraco.",
-        ];
+        const tituloHabilidade = {
+            passiva: "Crise de riso",
+            arma: "Solta o som",
+            um: "Piadola",
+            dois: "TO COM DEPRESSÃO",
+        };
+        const textoHabilidade = {
+            passiva:"Solta uma piada muito boa quando acumula pensamento, fazendo a equipe ter uma crise de riso. Por consequência, todos perdem um turno,mas, no próximo terão um grande buff.",
+            arma: "Escolhe uma música adequada a situação, dando um leve buff.",
+            um: "Solta uma piadola que dá um pequeno buff e acumula pensamento.",
+            dois: "Lança AirPods no inimigo, acertando bem na orelha e o fazendo escutar musicas tristes. Com isso, deixando-o mais fraco.",
+        };
 
-        const imgsBotao = [
-            "https://i.imgur.com/U8yQXgO.jpg",
-            "https://i.imgur.com/cbdHquV.jpg",
-            "https://i.imgur.com/7Zgn1IK.png",
-            "https://i.imgur.com/caR9gB4.png",
-        ];
+        const imgsBotao = {
+            passiva:"https://i.imgur.com/U8yQXgO.jpg",
+            arma: "https://i.imgur.com/cbdHquV.jpg",
+            um: "https://i.imgur.com/7Zgn1IK.png",
+            dois: "https://i.imgur.com/caR9gB4.png",
+        };
 
-        const idsImgBotao = [
-            "carta-d_img-habil-passiva",
-            "carta-d_img-habil-arma",
-            "carta-d_img-habil-um",
-            "carta-d_img-habil-dois",
-        ];
+        const idsImgBotao = {
+            passiva: "carta-d_img-habil-passiva",
+            arma: "carta-d_img-habil-arma",
+            um: "carta-d_img-habil-um",
+            dois: "carta-d_img-habil-dois",
+        };
 
         const state = {
             songJazz: new Audio(songArma),
@@ -128,15 +128,16 @@ const CartaDaniel = () =>{
 
         return (
             <Carta    
-                imgCarta={imgCarta}
-                tituloHabilidade={tituloHabilidade}
-                textoHabilidade={textoHabilidade}
-                imgsBotao={imgsBotao}
-                idsImgBotao={idsImgBotao}
-                acaoPassiva={acaoPassiva.bind(this)}
-                acaoArma={acaoArma.bind(this)}
-                acaoUm={acaoUm.bind(this)}
-                acaoDois={acaoDois.bind(this)}
+                srcImgCarta={imgCarta}
+                tituloHabilidades={tituloHabilidade}
+                textoshabilidades={textoHabilidade}
+                srcImgsBotao={imgsBotao}
+                acaoPassiva={acaoPassiva}
+                acaoArma={acaoArma}
+                acaoUm={acaoUm}
+                acaoDois={acaoDois}
             />
         );
 }
+
+export default CartaDaniel
