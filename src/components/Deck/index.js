@@ -1,5 +1,4 @@
-import { Component } from "react";
-import "./estilo.css";
+import "./Deck.css";
 import CartaDaniel from "../CartaDaniel";
 
 const Deck = (props) => {

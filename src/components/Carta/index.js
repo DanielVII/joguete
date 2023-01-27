@@ -1,7 +1,4 @@
-import HabilPassiva from "./HabilPassiva";
-import HabilArma from "./HabilArma";
-import HabilUm from "./HabilUm";
-import HabilDois from "./HabilDois";
+import './Carta.css'
 
 const Carta = (props) => {
     
