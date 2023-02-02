@@ -2,28 +2,26 @@ import './BotaoHabilidade.css'
 
 const BotaoHabilidade = (props) => {
 
-    const querryNomeClasseCaixaTexto = "." + props.nomeClasseCaixaTexto
+    // const mouseInsideCaixaHabil = () => {
+    //     document.querySelector(props.nomeClasseCaixaTexto).style.display = "flex";
+    // }
 
-    const mouseInsideCaixaHabil = () => {
-        document.querySelector(querryNomeClasseCaixaTexto).style.display = "flex";
-    }
-
-    const mouseOutsideCaixaHabil = () => {
-        document.querySelector(querryNomeClasseCaixaTexto).style.display = "none";
-    }
+    // const mouseOutsideCaixaHabil = () => {
+    //     document.querySelector(props.nomeClasseCaixaTexto).style.display = "none";
+    // }
 
     return (
         <button
             type="button"
             onClick={props.acao}
             className= {props.nomeClasseBotao + " carta-habilidade"}
-            onMouseEnter={mouseInsideCaixaHabil()}
-            onMouseLeave={mouseOutsideCaixaHabil()}
+            // onMouseEnter={mouseInsideCaixaHabil()}
+            // onMouseLeave={mouseOutsideCaixaHabil()}
         >
             <img
                 src={props.imgBotaoHabilidade}
                 alt="img-habilidade"
-                className={props.nomeClasseHabilidadeImg}
+                className="img-habilidade"
             />
         </button>
     );

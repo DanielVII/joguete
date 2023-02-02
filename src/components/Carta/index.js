@@ -11,10 +11,10 @@ const Carta = (props) => {
         srcImgsBotao - acaoPassiva - acaoArma - acaoUm - acaoDois
     */
     const classNameCaixatxt = {
-        passiva: "caixa-texto-habil-passiva",
-        arma: "caixa-texto-habil-arma",
-        um: "caixa-texto-habil-um",
-        dois: "caixa-texto-habil-dois",
+        passiva: ".caixa-texto-habil-passiva",
+        arma: ".caixa-texto-habil-arma",
+        um: ".caixa-texto-habil-um",
+        dois: ".caixa-texto-habil-dois",
     };
 
     const classNameBotao = {

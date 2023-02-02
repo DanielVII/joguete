@@ -9,7 +9,7 @@
 
     grid-row-start: 7;
 }
-.carta-img-habilidade {
+.carta-habilidade .img-habilidade {
     width: calc(var(--sizeCardWidth) / 4);
     height: calc(var(--sizeCardheight) / 6);
     display: block;
