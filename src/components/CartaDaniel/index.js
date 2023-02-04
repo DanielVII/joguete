@@ -1,5 +1,11 @@
-import React, { Component } from "react";
-import Carta from "../Carta";
+import React, { useState } from "react"
+import Carta from "../Carta"
+
+import jazzmp3 from "./assets/static/jazz.mp3"
+import sadSong1mp3 from "./assets/static/sadSong1.mp3"
+import sadSong2mp3 from "./assets/static/sadSong2.mp3"
+import sadSong3mp3 from "./assets/static/sadSong3.mp3"
+
 
 const CartaDaniel = () => {
 
@@ -22,107 +28,90 @@ const CartaDaniel = () => {
     };
 
 
-    // const state = {
-    //     songJazz: new Audio(songArma),
-    //     isPlayingJazz: false,
-
-    //     sadSong: [
-    //         new Audio(sadSong1),
-    //         new Audio(sadSong2),
-    //         new Audio(sadSong3),
-    //     ],
-
-    //     isPlayingSad: false,
-
-    //     playingNowSad: new Audio(sadSong3),
-
-    //     playingNowSadOnline: false,
-
-    //     mama: [],
-    // };
-
-
-    //    const componentDidMount = () => {
-    //          const response = api.get("habilidades/?format=json");
-
-    //          setState({ mama: response.data });
-
-    //      }
-    //    const playPause = (audio, isplaying) => {
-    //         if (isplaying) {
-    //             audio.pause();
-    //         } else {
-    //             audio.load();
-    //             audio.play();
-    //             audio.loop = true;
-    //         }
-    //     }
-
-
-
+    const [tocandoJazz, setTocandoJazz] = useState(false)
+    const [jazz] = useState(new Audio(jazzmp3))
+    jazz.loop = true;
     const acaoUm = () => {
-        // playPause(state.songJazz, state.isPlayingJazz);
-        // setState({ isPlayingJazz: !state.isPlayingJazz });
 
-        // let imgem = document.querySelector("#carta-d_img-habil-arma");
-        // if (state.isPlayingJazz) {
-        //     imgem.src = "https://i.imgur.com/cbdHquV.jpg";
-        // } else {
-        //     imgem.src = "https://i.imgur.com/I9yx1ab.jpg";
-        // }
+        const imgBotao = document.getElementById(idCarta).querySelector(".botao-habilidade-um").querySelector(".img-habilidade")
 
-        // console.log(state.mama);
-        console.log("BOOOOOM. nada acontece");
+        if (tocandoJazz) {
+            imgBotao.src = "https://i.imgur.com/cbdHquV.jpg"
+            jazz.pause()
+            setTocandoJazz(false)
+        } else {
+            imgBotao.src = "https://i.imgur.com/I9yx1ab.jpg"
+            jazz.load();
+            jazz.play();
+
+            setTocandoJazz(true)
+        }
+
     }
 
 
-    const seletor = () => {
-        return Math.floor(Math.random() * 3);
-    }
+    const [tocandoSad, setTocandoSad] = useState(false)
+    const [sadSong1] = useState(new Audio(sadSong1mp3))
+    const [sadSong2] = useState(new Audio(sadSong2mp3))
+    const [sadSong3] = useState(new Audio(sadSong3mp3))
+    const [seletor, setSeletor] = useState(1)
 
     const acaoDois = () => {
-        // if (state.playingNowSadOnline) {
-        //     playPause(
-        //         state.playingNowSad,
-        //         state.playingNowSadOnline
-        //     );
-        // }
 
-        // setState({ playingNowSadOnline: !state.playingNowSadOnline });
+        const imgBotao = document.getElementById(idCarta).querySelector(".botao-habilidade-dois").querySelector(".img-habilidade")
 
-        // const newSong = state.sadSong[seletor()];
+        if (tocandoSad) {
+            switch (seletor) {
+                case 1:
+                    sadSong1.pause()
+                    break;
+                case 2:
+                    sadSong2.pause()
+                    break;
+                case 3:
+                    sadSong3.pause()
+                    break;
+                default:
+                    console.log("Doidera")
+            }
+            setTocandoSad(false)
+            setSeletor(Math.floor(Math.random() * 3))
 
-        // setState({ playingNowSad: newSong });
+            imgBotao.src = "https://i.imgur.com/caR9gB4.png"
+        } else {
+            switch (seletor) {
+                case 1:
+                    sadSong1.load()
+                    sadSong1.play()
+                    break;
+                case 2:
+                    sadSong2.load()
+                    sadSong2.play()
+                    break;
+                case 3:
+                    sadSong3.load()
+                    sadSong3.play()
+                    break;
+                default:
+                    console.log("Doidera")
+            }
+            setTocandoSad(true)
+            imgBotao.src = "https://i.imgur.com/boHEiAp.png"
+        }
 
-        // playPause(newSong, state.isPlayingSad);
 
-        // setState({ isPlayingSad: !state.isPlayingSad });
-
-        // let imgem = document.querySelector("#carta-d_img-habil-dois");
-        // if (state.isPlayingSad) {
-        //     imgem.src = "https://i.imgur.com/caR9gB4.png";
-        // } else {
-        //     imgem.src = "https://i.imgur.com/boHEiAp.png";
-        // }
-        console.log("BOOOOOM. nada acontece");
     }
 
     return (
-        <>
-            <audio src="./assets/static/jazz.mp3" id="som-jazz"></audio>
-            <audio src="./assets/static/sadSong1.mp3" id="som-sad-1"></audio>
-            <audio src="./assets/static/sadSong2.mp3" id="som-sad-2"></audio>
-            <audio src="./assets/static/sadSong3.mp3" id="som-sad-3"></audio>
-            <Carta
-                srcImgCarta={imgCarta}
-                titulosHabilidades={tituloHabilidade}
-                textoshabilidades={textoHabilidade}
-                srcImgsBotao={imgsBotao}
-                acaoUm={acaoUm}
-                acaoDois={acaoDois}
-                idCarta={idCarta}
-            />
-        </>
+        <Carta
+            srcImgCarta={imgCarta}
+            titulosHabilidades={tituloHabilidade}
+            textoshabilidades={textoHabilidade}
+            srcImgsBotao={imgsBotao}
+            acaoUm={acaoUm}
+            acaoDois={acaoDois}
+            idCarta={idCarta}
+        />
     );
 }
 
