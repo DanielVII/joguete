@@ -1,4 +1,4 @@
-.container-deck {
+.deck {
     --sizeCardWidth: calc(301px * 4 / 5);
     --sizeCardheight: calc(421px * 4 / 5);
 

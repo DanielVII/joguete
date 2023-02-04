@@ -8,7 +8,7 @@
 
     transition-duration: 1.5s;
 }
-.carta-img-principal {
+.carta .img-principal {
     width: var(--sizeCardWidth);
     height: var(--sizeCardheight);
     transition-duration: 1.5s;

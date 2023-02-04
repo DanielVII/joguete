@@ -1,4 +1,4 @@
-.caixa-texto-habil {
+.caixa-texto-habilidade {
     display: flex;
     flex-direction: column;
 
@@ -14,10 +14,11 @@
     grid-column-end: 6;
 
     grid-row-start: 6;
-    grid-row-end: 6;
+
+    display: none;
 }
 
-.texto-nome-habil {
+.caixa-texto-habilidade .texto-nome-habil {
     font-size: 0.8em;
 
     border-bottom: solid;
@@ -25,23 +26,7 @@
     border-color: grey;
 }
 
-.texto-acao-habil {
+.caixa-texto-habilidade .texto-acao-habil {
     font-size: 0.6em;
     margin: 0.5em 0;
-}
-
-.caixa-texto-habil-passiva {
-    display: none;
-}
-
-.caixa-texto-habil-arma {
-    display: none;
-}
-
-.caixa-texto-habil-um {
-    display: none;
-}
-
-.caixa-texto-habil-dois {
-    display: none;
 }

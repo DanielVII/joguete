@@ -8,41 +8,26 @@ const Carta = (props) => {
     props:
         srcImgCarta - titulosHabilidades - textoshabilidades
 
-        srcImgsBotao - acaoPassiva - acaoArma - acaoUm - acaoDois
+        srcImgsBotao - acaoUm - acaoDois
     */
     const classNameCaixatxt = {
-        passiva: ".caixa-texto-habil-passiva",
-        arma: ".caixa-texto-habil-arma",
-        um: ".caixa-texto-habil-um",
-        dois: ".caixa-texto-habil-dois",
+        um: "texto-habilidade-um",
+        dois: "texto-habilidade-dois",
     };
 
     const classNameBotao = {
-        passiva: "carta-habil-passiva",
-        arma: "carta-habil-arma",
-        um: "carta-habil-um",
-        dois: "carta-habil-dois",
+        um: "botao-habilidade-um",
+        dois: "botao-habilidade-dois",
     };
 
     return (
-        <div className="carta">
+        <div className="carta" id={props.idCarta}>
             <img
                 src={props.srcImgCarta}
                 alt="imagem da carta"
-                className="carta-img-principal"
+                className="img-principal"
             />
 
-            <CaixaTextoHabilidade
-                nomeClasseCaixaTexto={classNameCaixatxt.passiva}
-                tituloHabilidade={props.titulosHabilidades.passiva}
-                textoHabilidade={props.textoshabilidades.passiva}
-            />
-
-            <CaixaTextoHabilidade
-                nomeClasseCaixaTexto={classNameCaixatxt.arma}
-                tituloHabilidade={props.titulosHabilidades.arma}
-                textoHabilidade={props.textoshabilidades.arma}
-            />
 
             <CaixaTextoHabilidade
                 nomeClasseCaixaTexto={classNameCaixatxt.um}
@@ -57,24 +42,11 @@ const Carta = (props) => {
             />
 
             <BotaoHabilidade
-                acao={props.acaoPassiva}
-                imgBotaoHabilidade={props.srcImgsBotao.passiva}
-                nomeClasseCaixaTexto={classNameCaixatxt.passiva}
-                nomeClasseBotao={classNameBotao.passiva}
-            />
-
-            <BotaoHabilidade
-                acao={props.acaoArma}
-                imgBotaoHabilidade={props.srcImgsBotao.arma}
-                nomeClasseCaixaTexto={classNameCaixatxt.arma}
-                nomeClasseBotao={classNameBotao.arma}
-            />
-
-            <BotaoHabilidade
                 acao={props.acaoUm}
                 imgBotaoHabilidade={props.srcImgsBotao.um}
                 nomeClasseCaixaTexto={classNameCaixatxt.um}
                 nomeClasseBotao={classNameBotao.um}
+                idCarta={props.idCarta}
             />
 
             <BotaoHabilidade
@@ -82,6 +54,7 @@ const Carta = (props) => {
                 imgBotaoHabilidade={props.srcImgsBotao.dois}
                 nomeClasseCaixaTexto={classNameCaixatxt.dois}
                 nomeClasseBotao={classNameBotao.dois}
+                idCarta={props.idCarta}
             />
         </div>
     );

@@ -2,21 +2,17 @@ import './BotaoHabilidade.css'
 
 const BotaoHabilidade = (props) => {
 
-    // const mouseInsideCaixaHabil = () => {
-    //     document.querySelector(props.nomeClasseCaixaTexto).style.display = "flex";
-    // }
-
-    // const mouseOutsideCaixaHabil = () => {
-    //     document.querySelector(props.nomeClasseCaixaTexto).style.display = "none";
-    // }
-
     return (
         <button
             type="button"
             onClick={props.acao}
             className= {props.nomeClasseBotao + " carta-habilidade"}
-            // onMouseEnter={mouseInsideCaixaHabil()}
-            // onMouseLeave={mouseOutsideCaixaHabil()}
+            onMouseEnter={() => {
+                document.getElementById(props.idCarta).getElementsByClassName(props.nomeClasseCaixaTexto)[0].style.display = "flex"}
+            }
+            onMouseLeave={() => {
+                document.getElementById(props.idCarta).getElementsByClassName(props.nomeClasseCaixaTexto)[0].style.display = "none"
+            }}
         >
             <img
                 src={props.imgBotaoHabilidade}

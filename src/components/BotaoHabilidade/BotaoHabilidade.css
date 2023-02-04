@@ -16,19 +16,12 @@
     cursor: pointer;
 }
 
-.carta-habil-passiva {
+.carta .botao-habilidade-um {
     grid-column-start: 2;
 }
 
-.carta-habil-arma {
-    grid-column-start: 3;
-}
-
-.carta-habil-um {
-    grid-column-start: 4;
-}
-
-.carta-habil-dois {
+.carta .botao-habilidade-dois {
     grid-column-start: 5;
+
 }
 

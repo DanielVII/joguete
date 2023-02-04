@@ -1,4 +1,4 @@
-.container-header {
+.header {
     display: flex;
     justify-content: end;
 
@@ -6,7 +6,7 @@
     padding: 0 10%;
 }
 
-.container-header_clicavel {
+.header .clicavel {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -15,10 +15,10 @@
     transition-duration: 500ms;
 }
 
-.container-header_praianos:hover {
+.header .praianos:hover {
     color: var(--laranja);
 }
 
-.container-header_trevosos:hover {
+.header .trevosos:hover {
     color: purple;
 }
