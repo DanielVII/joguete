@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import Carta from "../Carta"
 
-import jazzmp3 from "./assets/static/jazz.mp3"
-import sadSong1mp3 from "./assets/static/sadSong1.mp3"
-import sadSong2mp3 from "./assets/static/sadSong2.mp3"
-import sadSong3mp3 from "./assets/static/sadSong3.mp3"
+import jazzmp3 from "./assets/static/Music/jazz.mp3"
+import sadSong1mp3 from "./assets/static/Music/sadSong1.mp3"
+import sadSong2mp3 from "./assets/static/Music/sadSong2.mp3"
+import sadSong3mp3 from "./assets/static/Music/sadSong3.mp3"
 
 
 const CartaDaniel = () => {
