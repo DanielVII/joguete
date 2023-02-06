@@ -1,0 +1,27 @@
+.carta-habilidade {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: calc(var(--sizeCardWidth) / 4);
+    height: calc(var(--sizeCardheight) / 6);
+    border: none;
+
+    grid-row-start: 7;
+}
+.carta-habilidade .img-habilidade {
+    width: calc(var(--sizeCardWidth) / 4);
+    height: calc(var(--sizeCardheight) / 6);
+    display: block;
+    cursor: pointer;
+}
+
+.carta .botao-habilidade-um {
+    grid-column-start: 2;
+}
+
+.carta .botao-habilidade-dois {
+    grid-column-start: 5;
+
+}
+

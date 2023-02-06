@@ -1,5 +1,7 @@
 :root {
     --laranja: #ff7500;
+    --sizeCardWidth: 301px;
+    --sizeCardheight: 421px;
 }
 
 .site {

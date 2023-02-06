@@ -1,0 +1,20 @@
+.deck {
+    --sizeCardWidth: calc(301px * 4 / 5);
+    --sizeCardheight: calc(421px * 4 / 5);
+
+    width: 70%;
+
+    border: solid;
+    border-color: #dfdfde;
+    border-width: 2px;
+    border-radius: 1em;
+
+    padding: 5%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
