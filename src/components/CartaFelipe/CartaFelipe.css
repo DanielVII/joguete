@@ -1,0 +1,18 @@
+.caixa-texto-pos-acao-um{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caixa-texto-pos-acao-um h1{
+    font-size: 5em;
+    margin: 0;
+    color: #2C3639;
+}
+
+.caixa-texto-pos-acao-um p {
+    margin: 0;
+    color: #3F4E4F;
+}

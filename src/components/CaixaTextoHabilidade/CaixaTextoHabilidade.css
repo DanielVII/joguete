@@ -16,6 +16,7 @@
     grid-row-start: 6;
 
     align-items: center;
+    display: none;
 }
 
 .caixa-texto-habilidade .texto-nome-habil {

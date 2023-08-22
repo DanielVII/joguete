@@ -2,7 +2,12 @@
     --sizeCardWidth: calc(301px * 4 / 5);
     --sizeCardheight: calc(421px * 4 / 5);
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     width: 70%;
+    height: 100%;
 
     border: solid;
     border-color: #dfdfde;
@@ -11,6 +16,7 @@
 
     padding: 5%;
     margin: 0 auto;
+
 }
 
 
